@@ -839,12 +839,13 @@ address {
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 580px;
+  height: 581px;
   background-color: #ffffff;
 }
 
@@ -868,17 +869,9 @@ address {
 
 .contact-form {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  display: inline-block;
   }
 
 .contact-form-title {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -909,61 +902,115 @@ address {
   color: #757575;
 }
 
+.contact-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
 
 .contact-form-input {
-  display: block;
   width: 100%;
   height: 40px;
-  margin-top: 4px;
-  margin-bottom: 10px;
-  align-items: center;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.contact-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.contact-form-input:focus + .contact-form-icon {
+fill: var(--accent-color);
+}
+
+.contact-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-textarea {
-  display: flex;
-  margin-top: 4px;
-  margin-bottom: 20px;
-  padding: 12px 16px;
   width: 100%;
   height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
   resize: none;
-  font-family: 'Roboto';
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.contact-form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  
+}
+
+.contact-form-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
-}
-
-.contact-form-checkbox {
-  display: inline-block;
-}
-
-.contact-form-checkbox-text {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  /* identical to box height, or 171% */
-  letter-spacing: 0.03em;
-  color: #757575;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+  
+
+.contact-form-checkbox {
+ 
 }
 
 .contact-form-checkbox-agreement {
   color: var(--accent-color);
 }
 
+.contact-form-checkbox-label {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.contact-form-checkbox-label::before {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color-theme-light);
+  border-radius: 2px;
+  cursor: pointer;
+  content: '';
+  margin-right: 10px;
+}
+
 .contact-form-btn {
-  height: 40px;
-  min-width: 164px;
+  height: 50px;
+  min-width: 200px;
   padding: 10px 55px;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
@@ -971,7 +1018,7 @@ address {
   font-size: 16px;
   line-height: 1.88;
   /* identical to box height, or 187% */
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -985,6 +1032,7 @@ address {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .contact-form-btn:hover,
