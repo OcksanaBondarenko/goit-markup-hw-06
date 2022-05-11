@@ -975,7 +975,12 @@ fill: var(--accent-color);
   
 
 .contact-form-checkbox {
- 
+
+
+}
+
+.contact-form-checkbox-wrapper {
+
 }
 
 .contact-form-checkbox-agreement {
@@ -983,7 +988,6 @@ fill: var(--accent-color);
 }
 
 .contact-form-checkbox-label {
-  display: flex;
   align-items: center;
   font-family: 'Roboto';
   font-style: normal;
