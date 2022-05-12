@@ -508,11 +508,13 @@ address {
 
 
 .footer {
+  position: relative;
   font-family: inherit;
   background-color: var(--secondary-primary-text-color-theme-dark);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 
 .footer-social-list {
   display: flex;
@@ -618,18 +620,22 @@ address {
 
 }
 
-.footer-form-label {
-  display: block;
-  margin-right: 12px;
-  margin-top: 20px;
+.footer-form-box {
+  display: inline;
 
 }
 
+.footer-form-label {
+  display: inline-block;
+  margin-top: 20px;
+}
+
 .footer-form-input {
+  outline: none;
   display: inline-flex;
-  margin-right: 12px;
+
   padding-left: 16px;
-  width: 358px;
+  min-width: 350px;
   height: 50px;
   font-family: 'Roboto';
   font-style: normal;
@@ -647,7 +653,11 @@ address {
 }
 
 .footer-form-btn {
-  min-width: 200px;
+  position: absolute;
+  bottom: 102px;
+  right: 85px;
+
+  min-width: 143px;
   padding: 10px 28px;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
@@ -662,9 +672,6 @@ address {
   letter-spacing: 0.06em;
   color: var(--primary-text-color-theme-dark);
   background-color: #2196F3;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
   
   transition-property: opacity, visibility, transform;
   transition-duration: 250ms;
