@@ -137,6 +137,8 @@ address {
 .clients-list-link:hover,
 .clients-list-link:focus {
   fill: var(--accent-color);
+  border: 1px solid #2196F3;
+
 }
 
 
@@ -502,10 +504,10 @@ address {
   transition: var(--trasform-primary);
 }
 
-.clients-list-item:hover,
+/* .clients-list-item:hover,
 .clients-list-item:focus {
   border: 1px solid #2196F3;
-}
+} */
 
 /* ===== Footer ===== */
 
